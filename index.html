@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill 1 Mactal</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #f3f9d3 0%, #f3f3cf 100%);
+        padding: 40px 20px;
+        max-width: 400px;
+        margin: 40px auto;
+        /* Modern Border & Glass Effect */
+        border: rgba(0, 0, 0, 0.3) 2px solid;
+        border-radius: 25px;
+      
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 25px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 8px 0 20px 0;
+        border: 2px solid #c4c4c6;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box; /* Ensures padding doesn't push width out */
+        outline: none;
+    }
+
+    input[type="number"]:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(to bottom, #3498db, #2980b9);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.1s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+    }
+
+    button:hover {
+        background: #2980b9;
+    }
+
+
+    p {
+        font-size: 15px;
+        color: #64748b;
+        margin-top: 20px;
+        line-height: 1.5;
+
+    }
+
+    #average, #result {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+    <h2>Simple Average Finder</h2>
+
+    <p>Score 1: </p>
+    <input id="score1" type="number">
+
+    <p>Score 2:</p>
+    <input id="score2" type="number">
+
+    <button py-click="compute_average">Compute</button>
+    <p>Average: <span id="average"></span></p>
+    <p>Passed? <span id="result"></span></p>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
